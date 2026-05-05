@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>Click and collect - La Luna Boutique</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&family=Lato&display=swap" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body id="top">
+    <div class="fixed-top-container">
+        <header>
+            <h1>Click and collect</h1>
+            <div class="logo-center">
+                <img src="img\a.jpg" alt="Logo La lune boutique">
+            </div>
+        </header>
+        
+        <nav>
+            <ul id="nav">
+                <li><a href="index.html">La Maison</a></li>
+                <li><a href="Patisserie.html">Patisserie</a></li>
+                <li><a href="gateaux.html">Gâteaux d'anniversaire</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- LE FORMULAIRE DE COMMANDE -->
+    <main class="commande-page">
+        <h2>Créez votre gâteau sur-mesure</h2>
+        <p class="intro-text">Remplissez vos envies ci-dessous. Nous vous recontacterons très vite pour confirmer la commande !</p>
+
+        <!-- L'attribut action="mailto:..." est ce qui envoie l'email -->
+        <form action="mailto:Nastaran.kamali77@gmail.com" method="post" enctype="text/plain" class="formulaire-commande">
+            
+            <!-- Informations de contact -->
+            <fieldset>
+                <legend>Vos coordonnées</legend>
+                <input type="text" name="Nom" placeholder="Votre nom et prénom" required>
+                <input type="tel" name="Telephone" placeholder="Votre numéro de téléphone" required>
+                <!-- On ajoute une date pour savoir quand ils veulent le gâteau -->
+                <label>Date de retrait souhaitée :</label>
+                <input type="date" name="Date_de_retrait" required>
+            </fieldset>
+
+            <!-- Étape 1 : Taille -->
+            <fieldset>
+                <legend>1. La taille du gâteau</legend>
+                <select name="Taille" required>
+                    <option value="">-- Choisissez la taille --</option>
+                    <option value="Petit (4 à 6 personnes)">Petit (4 à 6 personnes)</option>
+                    <option value="Moyen (8 à 10 personnes)">Moyen (8 à 10 personnes)</option>
+                    <option value="Grand (12 à 15 personnes)">Grand (12 à 15 personnes)</option>
+                </select>
+            </fieldset>
+
+            <!-- Étape 2 : Le Goût (Biscuit) -->
+            <fieldset>
+                <legend>2. Le goût du gâteau</legend>
+                <p style="font-size: 0.9rem; margin-top:0;">(Choisissez 1 parfum, ou une option mix)</p>
+                <select name="Gout_Base" required>
+                    <option value="">-- Choisissez le goût --</option>
+                    <option value="Chocolat">Chocolat</option>
+                    <option value="Fraise Vanille">Fraise Vanille</option>
+                    <option value="Fruit de la passion">Fruit de la passion</option>
+                    <option value="Matcha (+3 euros)">Matcha (+3 euros)</option>
+                    <option value="Mix de deux parfums">Mix de 2 parfums (Précisez dans les notes en bas)</option>
+                </select>
+            </fieldset>
+
+            <!-- Étape 3 : La Garniture -->
+            <fieldset>
+                <legend>3. La garniture intérieure</legend>
+                <select name="Garniture" required>
+                    <option value="">-- Choisissez la garniture --</option>
+                    <option value="Banane et crème au chocolat">Banane et crème au chocolat</option>
+                    <option value="Fraise">Fraise</option>
+                    <option value="Fraise et crème vanille">Fraise et crème vanille</option>
+                    <option value="Mousse au chocolat">Mousse au chocolat</option>
+                    <option value="Crème simple">Crème</option>
+                </select>
+            </fieldset>
+
+            <!-- Étape 4 : Décoration & Modèle -->
+            <fieldset>
+                <legend>4. Modèle & Décoration</legend>
+                <textarea name="Decoration_et_Notes" rows="4" placeholder="Décrivez le modèle souhaité, les couleurs, le thème, ou si vous avez choisi un 'Mix de parfums'..." required></textarea>
+            </fieldset>
+
+            <button type="submit" class="btn-magique" style="width: 100%; font-size: 1.2rem; padding: 15px;">Envoyer ma demande de commande ✨</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>© 2026 La Luna Boutique - Tous droits réservés</p>
+    </footer>
+</body>
+</html>

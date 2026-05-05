@@ -1,0 +1,203 @@
+:root {
+    --rose-pastel: #ffe4e9;
+    --rose-vif: #ffafbd;
+    --blanc-sucre: #ffffff;
+    --or-magique: #d4af37;
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--rose-pastel);
+    color: #5d4037;
+}
+
+header {
+    background: white;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(255, 175, 189, 0.3);
+}
+
+h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 3rem;
+    color: var(--rose-vif);
+    margin: 0;
+}
+
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #4F274E;
+    font-weight: bold;
+}
+
+.hero {
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), 
+                url('https://imgur.com/a/L6kG4Ep');
+    background-size: cover;
+}
+
+.btn-magique {
+    background: var(--rose-vif);
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 0 10px var(--rose-vif);
+	
+}
+
+.btn-magique:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px #ffccd5;
+}
+
+.gallery {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 50px;
+}
+
+.cake-card {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    border: 2px solid var(--rose-pastel);
+    transition: 0.3s;
+}
+
+.cake-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--rose-vif);
+}
+
+/* Le fond noir transparent */
+.lightbox {
+  display: none; /* Caché par défaut */
+  position: fixed;
+  z-index: 9999;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(5px); /* Floute un peu l'arrière-plan pour le style */
+  align-items: center;
+  justify-content: center;
+}
+.photo-box {
+    width: 100%;
+    max-width: 900px; /* Taille maximum de ton image */
+    margin: 0 auto; /* C'est cette ligne qui centre la boîte au milieu de la page */
+    text-align: center; /* Centre l'image et la légende à l'intérieur de la boîte */
+}
+
+.photo-box img {
+    width: 100%; /* L'image s'adapte à la taille de la boîte */
+    height: auto;
+}
+
+.hero {
+    /* On met la lune en background */
+    background-image: url('img/lune.png');
+    
+    /* On dit à l'image de se centrer */
+    background-position: center;
+    
+    /* On empêche l'image de se répéter comme un carrelage */
+    background-repeat: no-repeat;
+    
+    /* C'EST ICI QU'ON RÈGLE LA TAILLE : 
+       Essaye 'contain' (pour tout voir) ou un pourcentage (ex: 40%) */
+    background-size: 50%; /* Ajoute ou diminue ce chiffre selon ce que tu veux */
+    
+    /* Juste pour s'assurer qu'il y a assez de place en hauteur (optionnel) */
+    min-height: 500px; 
+}
+
+.lune-fond {
+    pointer-events: none; /* LA MAGIE EST ICI : l'image devient "fantôme" pour la souris */
+    
+    /* Si tu as besoin de réduire sa taille, tu peux le faire ici : */
+    width: 500px; /* Ajuste ce chiffre selon tes goûts */
+    
+    /* Si ton image décale tes liens, on la positionne en absolu : */
+    position: absolute;
+    z-index: -1; /* L'envoie derrière les liens */
+    left: 50%; /* La centre horizontalement */
+    transform: translateX(-50%); /* La centre parfaitement */
+}
+
+#nav {
+    display: flex;
+    justify-content: center; /* Aligne les liens au centre horizontalement */
+    gap: 30px; /* Espace entre chaque lien (tu peux modifier ce chiffre) */
+    padding: 0;
+    margin: 0;
+}
+
+/* 2. Centrer le contenu de la page Contact */
+.contact {
+    text-align: center; /* Centre tout le texte à l'intérieur */
+    margin: 50px auto; /* Ajoute de l'espace en haut/bas et centre la boîte */
+    max-width: 800px; /* Empêche le texte de s'étirer sur toute la largeur de l'écran */
+    padding: 0 20px; /* Ajoute une petite marge sur les côtés pour les téléphones */
+}
+
+/* Optionnel : centrer le footer (pied de page) si tu as du texte dedans */
+footer {
+    text-align: center;
+}
+.photo-patisserie {
+    width: 250px;        /* On fixe une largeur précise (tu peux ajuster ce chiffre) */
+    height: 250px;       /* LE SECRET EST ICI : on force exactement la même hauteur pour toutes ! */
+    object-fit: cover;   /* LA MAGIE : ça recadre l'image joliment au centre sans l'écraser */
+    border-radius: 15px; /* Tes jolis bords arrondis */
+    display: block;
+    margin: 0 auto 20px auto; /* Centre l'image et met un peu d'espace avant le titre */
+}
+h3 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.5rem;
+    color: var(--rose-vif);
+    margin: 0;
+	text-align: center;
+}
+p {
+	text-align: center;
+	}
+	
+/* --- ALIGNEMENT DES 3 PÂTISSERIES CÔTE À CÔTE --- */
+
+/* Le conteneur global qui aligne tout */
+.galerie-patisseries {
+    display: flex; /* La magie est ici : ça aligne les éléments enfants horizontalement */
+    justify-content: center; /* Centre les 3 blocs au milieu de la page */
+    gap: 50px; /* L'espace entre chaque gâteau */
+    flex-wrap: wrap; /* IMPORTANT : permet de passer à la ligne sur téléphone */
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* La boîte individuelle de chaque produit */
+.produit {
+    text-align: center; /* S'assure que tout est bien centré dans la petite boîte */
+    max-width: 300px; /* Limite la largeur de la boîte */
+    flex: 1 1 250px; /* Permet à la boîte de grandir ou rétrécir un peu selon l'écran */
+}
+h2 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.75rem;
+    color: #6441AB;
+    margin: 0;
+	text-align: center;
+}

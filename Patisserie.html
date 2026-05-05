@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>Patisserie</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&family=Lato&display=swap" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body id="top">
+    <div class="fixed-top-container">
+        <header>
+           
+            <h1>Patisserie</h1>
+			<div class="logo-center">
+					<img src="img\a.jpg" alt="Logo La lune boutique">
+			</div>
+			
+        </header>
+        <nav>
+            <ul id="nav">
+                <a href="index.html">La Maison</a>
+				<a href="gateaux.html">gateaux anniversaire</a>
+				<a href="clickandcollect.html">Click and Collect</a>
+				<a href="contact.html">Contact</a>
+            </ul>
+        </nav>
+   <!-- C'est très important d'avoir class="galerie-patisseries" ici -->
+<div id="container" class="galerie-patisseries">
+    
+    <article class="produit">
+        <img src="img/cookie.jpg" alt="Biscuits décorés" class="photo-patisserie">
+        <h3>Les cookies</h3>
+        <p>Les cookies personnalisés</p>
+    </article>
+
+    <article class="produit">
+        <img src="img/chcake.jpg" alt="Cheesecakes" class="photo-patisserie">
+        <h3>Les cheescakes</h3>
+        <p>Cheese cake / carotte cake / banana bread</p>
+    </article>
+
+    <article class="produit">
+        <img src="img/cupcake.jpg" alt="Cupcakes" class="photo-patisserie">
+        <h3>Cupcakes</h3>
+        <p>La magie des cupcakes</p>
+    </article>
+
+</div>
+			
+
+          <article class="instagram-section" style="text-align: center; margin: 50px 0;">
+            <h2>Retrouvez-nous sur Instagram</h2>
+            
+            <!-- Le lien cliquable vers ton compte Instagram -->
+            <a href="https://www.instagram.com/lalune_boutique__?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="btn-insta">
+                @lalunaboutique
+            </a>
+            
+        </article>
+    </div> <!-- Fermeture de ton container -->
+
+    <footer>
+        <p>© 2026 La Luna Boutique - Tous droits réservés</p>
+    </footer>
+        
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialisation propre d'AOS une fois le document chargé
+        $(document).ready(function() {
+            AOS.init({
+                duration: 1000,
+                once: true
+            });
+            // Force le rafraîchissement pour détecter les images dans les liens
+            AOS.refresh();
+        });
+    </script>
+</body>
+</html>
